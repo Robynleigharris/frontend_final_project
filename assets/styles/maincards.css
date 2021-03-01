@@ -1,0 +1,41 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+
+.about > div,
+.about > img {
+  width: 30%;
+}
+
+.about > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+  background-color: #c0a58e;
+  margin-left: 20%;
+  /* box-shadow: 7px 7px 14px #c3c1c1, -7px -7px 14px #ffffff;*/
+}
+
+.about > img {
+}
+/* Media query to change display options of about section */
+@media screen and (max-width: 768px) {
+  .about {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .about > div,
+  .about > img {
+    width: 100%;
+  }
+
+  .about > div:nth-child(odd) {
+    background-color: #e9c46a;
+  }
+}
