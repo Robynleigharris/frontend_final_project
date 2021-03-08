@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fake-login</title>
+    <link rel="stylesheet" href="./assets/styles/fakelogin.css" />
+  </head>
+  <body>
+    <div class="login-html">
+      <div class="card">
+        <h1>register user</h1>
+        <form
+          id="creatingaccount"
+          onsubmit="event.preventDefault(); creatingAcc()"
+        >
+          username<br />
+          <input
+            class="input"
+            type="text"
+            name="username"
+            id="username"
+          /><br />
+
+          email<br />
+          <input class="input" type="text" name="email" id="email" /><br />
+
+          password<br />
+          <input
+            class="input"
+            type="text"
+            name="password"
+            id="password"
+          /><br />
+          <button type="submit">submit</button><br />
+        </form>
+      </div>
+      <div class="card">
+        <h1>login user</h1>
+        <form id="login" onsubmit="event.preventDefault(); loggingin()">
+          username<br />
+          <input type="text" name="username" id="username" /><br />
+
+          email<br />
+          <input type="text" name="email" id="email" /><br />
+
+          password<br />
+          <input type="text" name="password" id="password" /><br />
+          <button type="submit" value="submit">submit</button><br />
+        </form>
+      </div>
+    </div>
+
+    <script src="./assets/scripts/fakelogin.js"></script>
+  </body>
+</html>

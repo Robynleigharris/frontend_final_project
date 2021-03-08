@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/styles/nav.css" />
     <link rel="stylesheet" href="./assets/styles/footer.css" />
     <link rel="stylesheet" href="./assets/styles/cards.css" />
+    <link rel="stylesheet" href="./assets/styles/modal.css" />
     <script
     src="https://kit.fontawesome.com/69e2fdf94d.js"
     crossorigin="anonymous"
@@ -44,153 +45,34 @@
             <button class="hamburger" onclick="toggleNav()">BURGERTHING</button>
           </div>
         </li>
-        <li class="nav-link"><a href="#">login/sign up</a></li>
+        <li class="nav-link"><a href="login.html">login/sign up</a></li>
+        <label for="cart" id="items">0</label>
+        <li class="nav-link" id="cart" ><i class="fa fa-shopping-cart" onclick="openCart()" style="width:auto;"></i></a></li>
+        <!-- main Section -->
+        <div id="id01" class="modal" id="try">
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div id="container">
+              <!-- <ul >
+                <li>iiiiiiiiiiiiiiii</li>
+              </ul> -->
+              <!-- <button type="submit">Purchase</button> -->
+            </div>
+            <div id="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </form>
+        </div>
       </ul>
       <button class="hamburger" onclick="toggleNav()"><img src="./assets/img/right-align.png" class="imgburger"></button>
     </div>
 
-
     <!--cards-->
-    <div class="card-container">
+<div id="menProd" class="card-container"></div>
 
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/menshirtfront.jpg" alt="img" class="card-image" />
-          <div class="middle">
-            <div class="text">add to cart</div>
-          </div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/menshortfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/mentacksuitfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/mentopfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/mentshirtfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-
-
-        <div class="card">
-          <div class="card-content">
-            <img src="./assets/img/menblazerfront.jpg" alt="img" class="card-image" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <p>ZAR</p>
-          </div>
-        </div>
-  
-        <div class="card">
-          <div class="card-content">
-            <img src="./assets/img/menchinofront.jpg" alt="#" class="card-image" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <p>ZAR</p>
-          </div>
-        </div>
-  
-        <div class="card">
-          <div class="card-content">
-            <img src="./assets/img/menjoggerfront.jpg" alt="img" class="card-image" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-            <p>ZAR</p>
-          </div>
-        </div>
-      
-
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/menoversizefront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/menpantsfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/menwatch.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/menglassesfront.jpg" alt="#" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/mencapfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-
-    <div class="card">
-      <div class="card-content">
-        <img src="./assets/img/menbaffront.jpg" alt="img" class="card-image" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-        <p>ZAR</p>
-      </div>
-    </div>
-  
-
-  <div class="card">
-      <div class="card-content">
-        <img src="./assets/img/menbeltfront.jpg" alt="img" class="card-image" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-        <p>ZAR</p>
-      </div>
-    </div>
-
-    
-</div>
-    
-
-
+<div id="cartItems"></div>
 
        <!--footer-->
     <div class="footer">
@@ -205,7 +87,11 @@
         </div>
       </div>
 
-         <!-- Script Imports -->
-    <script src="./assets/scripts/nav.js"></script>
   </body>
-</html>
+
+         <!-- Script Imports -->
+         <script src="./assets/scripts/nav.js"></script>
+         <script src="./assets/scripts/men.js"></script>
+         <script src="./assets/scripts/add-to-cart2.js"></script>
+         <script src="./assets/scripts/modal.js"></script>
+</htm>

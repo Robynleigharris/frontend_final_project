@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./assets/styles/nav.css" />
     <link rel="stylesheet" href="./assets/styles/footer.css" />
     <link rel="stylesheet" href="./assets/styles/cards.css" />
+    <link rel="stylesheet" href="./assets/styles/modal.css" />
+    <link rel="stylesheet" href="./assets/styles/cartcards.css" />
     <script
     src="https://kit.fontawesome.com/69e2fdf94d.js"
     crossorigin="anonymous"
@@ -44,147 +46,40 @@
             <button class="hamburger" onclick="toggleNav()">BURGERTHING</button>
           </div>
         </li>
-        <li class="nav-link"><a href="#">login/sign up</a></li>
-      </ul>
+        <li class="nav-link"><a href="login.html">login/sign up</a></li>
+        <label for="cart" id="items">0</label>
+        <li class="nav-link" id="cart" ><i class="fa fa-shopping-cart" onclick="openCart()" style="width:auto;"></i></a></li>
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+    </div>
+
+    <div id="container">
+
+        
+      <button type="submit">Purchase</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+    
+</ul>
       <button class="hamburger" onclick="toggleNav()"><img src="./assets/img/right-align.png" class="imgburger"></button>
     </div>
 
 
     <!--cards-->
-    <div class="card-container">
-        <div class="card">
-          <div class="card-content">
-            <img src="./assets/img/teddy front.jpg" alt="img" class="card-image" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <p>ZAR</p>
-          </div>
-        </div>
-  
-        <div class="card">
-          <div class="card-content">
-            <img src="./assets/img/trackfront.jpg" alt="#" class="card-image" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <p>ZAR</p>
-          </div>
-        </div>
-  
-        <div class="card">
-          <div class="card-content">
-            <img src="./assets/img/tshirtfront.jpg" alt="img" class="card-image" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-            <p>ZAR</p>
-          </div>
-        </div>
-      
+<div id="womenProd" class="card-container"></div>
 
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/cropfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/flufffront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/jumpsuirfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/leggingfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/leggingfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-    <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/backskirt.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/leggingfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/wsocks.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/womanglassesfront.jpg" alt="#" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-          <p>ZAR</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content">
-          <img src="./assets/img/wbagfront.jpg" alt="img" class="card-image" />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <p>ZAR</p>
-        </div>
-      </div>
-    
-
-    <div class="card">
-      <div class="card-content">
-        <img src="./assets/img/wcapfront.jpg" alt="img" class="card-image" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-        <p>ZAR</p>
-      </div>
-    </div>
-  
-
-  <div class="card">
-      <div class="card-content">
-        <img src="./assets/img/wbag2front.jpg" alt="img" class="card-image" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-        <p>ZAR</p>
-      </div>
-    </div>
-  
-    
-</div>
-    
-
+<div id="cartItems"></div>
 
 
        <!--footer-->
@@ -200,7 +95,13 @@
         </div>
       </div>
 
-         <!-- Script Imports -->
-    <script src="./assets/scripts/nav.js"></script>
+
   </body>
+   <!-- Script Imports -->
+   <script src="./assets/scripts/nav.js"></script>
+   <script src="./assets/scripts/women.js"></script>
+   <script src="./assets/scripts/add-to-cart2.js"></script>
+   <script src="./assets/scripts/modal.js"></script>
+
+   
 </html>

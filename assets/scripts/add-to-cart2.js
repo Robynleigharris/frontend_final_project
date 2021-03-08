@@ -1,0 +1,121 @@
+/* function addcart(id) {
+  let cart = document.getElementById("stuff_container");
+  let inCart = incart[0];
+  let selecteditem = incart[0];
+  let cartitem = `
+    <li class= "" id="product${id}" productprice=${selecteditem.price}>
+    ${selecteditem.name} : ${selecteditem.price}
+    <button onclick ="removingitem(${id})">remove</button></li>
+    `;
+}
+cart.innerHTML += cartitem;
+console.log();
+
+if (i >= 0) {
+  document.getElementById("items").innerHTML = i += 1;
+}*/
+
+let cartList = [];
+
+i = 0;
+
+function add(theitem) {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  cart ? cart : (cart = []);
+
+  fetch("http://127.0.0.1:5000/show-records/")
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+
+      let cartItem = json.filter((product) => {
+        return product.id == theitem;
+      });
+
+      console.log(cartItem[0]);
+      cart.push(cartItem[0]);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      document.getElementById("items").innerHTML = cart.length;
+      createCart();
+    });
+}
+
+function createCart() {
+  let cartprod = document.getElementById("container");
+  products = [];
+  let cart = localStorage.getItem("cart");
+  console.log("cart:", JSON.parse(cart));
+}
+
+function showcart() {
+  let activecart = document.getElementById("ccontainer");
+}
+
+function renderCart() {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+
+  fetch("http://127.0.0.1:5000/show-records/")
+    .then((res) => res.json())
+    .then((data) => {
+      s;
+      console.log(data);
+      console.log(cart);
+      let cartItems = [];
+
+      data.forEach((dataItem) => {
+        cart.forEach((cartItem) => {
+          if (dataItem.id == cartItem) {
+            cartItems.push(dataItem);
+          }
+        });
+      });
+
+      console.log(cartItems);
+      document.getElementById("modal").innerHTML = "";
+      cartItems.forEach((item) => {
+        let cartItem = createCartitem(item);
+        document.getElementById("modal").innerHTML += cartItem;
+      });
+    });
+}
+
+function createCartitem(theitem) {
+  let items = `<di>
+  <li id="cartI"><img src=${theitem.image} alt=${theitem.name}/>${theitem.name}${theitem.price}</li>
+  <button type="submit">Purchase</button>
+  </div>`;
+  let conn = document.getElementById("modal");
+  conn.innerHTML += items;
+}
+
+function openCart() {
+  // Get modal and show it
+  document.getElementById("id01").style.display = "block";
+
+  //   Select container to write data to
+  let cartContent = document.getElementById("container");
+
+  //   Get contents of cart from local storage
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  //   Make sure the cart is valid
+  cart ? cart : (cart = []);
+
+  //   Clear the cart content before writing fresh data
+  cartContent.innerHTML = "";
+
+  //   for each item in the cart ...
+  cart.forEach((cartItem) => {
+    // ... Create a new item and write it into content box
+    cartContent.innerHTML += `<div class="cart-container">
+    <div class="cart-card">
+    <div class="card-content">
+     <img src="${cartItem.image}" alt="img" class="cart-image" />
+       <p>${cartItem.name}</p>
+       <p>R${cartItem.price}</p>
+   </div>
+   </div>
+   </div>
+    
+        `;
+  });
+}

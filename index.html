@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="./assets/styles/nav.css" />
+    <link rel="stylesheet" href="./assets/styles/modal.css" />
     <link rel="stylesheet" href="./assets/styles/about.css" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="stylesheet" href="./assets/styles/footer.css" />
@@ -53,9 +54,28 @@
           </div>
         </li>
         <li class="nav-link"><a href="login.html">login/sign up</a></li>
+        <label for="cart" id="items">0</label>
+        <li class="nav-link" id="cart" ><i class="fa fa-shopping-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></i></a></li>
+        <!-- main Section -->
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="stuff_container">
+              
+              <button type="submit">Purchase</button>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </form>
+        </div>
       </ul>
+
       <button class="hamburger" onclick="toggleNav()"><img src="./assets/img/right-align.png" class="imgburger"></button>
     </div>
+    
     
      <!-- main Section -->
     <header class="main">
@@ -63,6 +83,8 @@
         <button onclick="new.html">latest</button>
 
       </header>
+      
+
 
       <!-- info cards -->
       <div class="bg-sec">
@@ -127,5 +149,7 @@
 
        <!-- Script Imports -->
     <script src="./assets/scripts/nav.js"></script>
+    <script src="./assets/scripts/add-cart.js"></script>
+    <script src="./assets/scripts/modal.js"></script>
   </body>
 </html>

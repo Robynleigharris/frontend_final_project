@@ -1,28 +1,26 @@
 /*---cards----*/
-.card-container {
+.cart-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.card-image {
+.cart-image {
   width: 20em;
   height: 27em;
 }
 
-.card {
+.cart-card {
   flex-basis: 15%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   text-align: center;
   margin-bottom: 5px;
   background-color: whitesmoke;
   margin-top: 10%;
-  margin-left: 1.5%;
-  margin-right: 1.5%;
+  margin-right: 10%;
 }
 
-.image {
+.cart-image {
   opacity: 1;
   display: block;
   width: 100%;
@@ -42,15 +40,7 @@
   text-align: center;
 }
 
-.card:hover .image {
-  opacity: 0.3;
-}
-
-.card:hover .middle {
-  opacity: 1;
-}
-
-.text {
+.cart-text {
   background-color: grey;
   color: white;
   font-size: 16px;
