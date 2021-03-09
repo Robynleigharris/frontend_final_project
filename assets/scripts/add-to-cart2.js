@@ -48,7 +48,7 @@ function createCart() {
 }
 
 function showcart() {
-  let activecart = document.getElementById("ccontainer");
+  let activecart = document.getElementById("container");
 }
 
 function renderCart() {
@@ -106,16 +106,33 @@ function openCart() {
   //   for each item in the cart ...
   cart.forEach((cartItem) => {
     // ... Create a new item and write it into content box
-    cartContent.innerHTML += `<div class="cart-container">
+    cartContent.innerHTML += `<div class="cart-container" id="totalitem" clothesTotal=R${cartItem.price}>
     <div class="cart-card">
     <div class="card-content">
      <img src="${cartItem.image}" alt="img" class="cart-image" />
-       <p>${cartItem.name}</p>
-       <p>R${cartItem.price}</p>
+       <p class="cart-text">${cartItem.name}</p>
+       <p class="cart-text">R${cartItem.price}</p>
+       <button id="removing">remove from cart</button>
    </div>
    </div>
    </div>
-    
         `;
+    calculate();
   });
 }
+
+function calculate() {
+  let itemTotal = document.querySelectorAll("[clothesTotal]");
+  let totalamount = 0;
+  for (let i = 0; i < itemTotal.length; i++) {
+    totalamount += parseInt(
+      itemTotal[i].getAttribute("clothesTotal").substring(1)
+    );
+  }
+
+  console.log(totalamount);
+  let theTotal = document.getElementsByClassName("cartTotal")[0];
+  theTotal.innerHTML += totalamount;
+}
+
+function remove() {}

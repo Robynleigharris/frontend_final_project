@@ -16,7 +16,7 @@
   text-align: center;
   margin-bottom: 5px;
   background-color: whitesmoke;
-  margin-top: 10%;
+  margin-top: 2%;
   margin-right: 10%;
 }
 
@@ -42,7 +42,7 @@
 
 .cart-text {
   background-color: grey;
-  color: white;
+  color: black;
   font-size: 16px;
   padding: 16px 32px;
 }
