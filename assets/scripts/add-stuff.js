@@ -1,7 +1,7 @@
 function addingItem() {
   const inputs = document.getElementsByTagName("input");
 
-  fetch("http://127.0.0.1:5000/add-new-record/", {
+  fetch("https://evening-escarpment-06933.herokuapp.com/add-new-record/", {
     method: "POST",
     body: JSON.stringify({
       name: inputs[0].value,

@@ -23,7 +23,7 @@ function add(theitem) {
   let cart = JSON.parse(localStorage.getItem("cart"));
   cart ? cart : (cart = []);
 
-  fetch("https://evening-escarpment-06933.herokuapp.coms/show-records/")
+  fetch("https://evening-escarpment-06933.herokuapp.com/show-records/")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);
