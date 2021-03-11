@@ -132,7 +132,17 @@ function calculate() {
 
   console.log(totalamount);
   let theTotal = document.getElementsByClassName("cartTotal")[0];
-  theTotal.innerHTML += totalamount;
+  theTotal.innerHTML = totalamount;
 }
 
 function remove() {}
+
+function purchase() {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  let total = 0;
+
+  cart.forEach((product) => {
+    total = total + parseInt(product.price);
+  });
+  alert("Thank you for shopping with us your total is R" + total);
+}

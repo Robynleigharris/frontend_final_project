@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="stylesheet" href="./assets/styles/footer.css" />
     <link rel="stylesheet" href="./assets/styles/maincards.css" />
+    <link rel="stylesheet" href="./assets/styles/contact.css" />
+    <link rel="stylesheet" href="./assets/styles/banner.css" />
+    <link rel="stylesheet" href="./assets/styles/headers.css" />
+    
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,32 +33,19 @@
       <img src="./assets/img/logo.png" alt="Logo" class="logo" />
       
       <ul class="nav-links" id="nav-links">
-        <div class="wrap">
-            <div class="search">
-              <input type="text" class="searchTerm" placeholder="What are you looking for?">
-              <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-             </button>
-            </div>
-            </div>
+      
         <li class="nav-link"><a href="index.html">HOME</a></li>
         <li class="nav-link dropdown">
           <a href="javascript:void(0)" class="dropbtn">WOMAN</a>
           <div class="dropdown-content">
             <a href="woman.html">All</a>
-            <a href="#">Tops</a>
-            <a href="#">Bottoms</a>
-            <a href="#">accesories</a>
         <li class="nav-link dropdown">
           <a href="javascript:void(0)" class="dropbtn">MEN</a>
           <div class="dropdown-content">
             <a href="men.html">all</a>
-            <a href="#">tops</a>
-            <a href="#">bottoms</a>
-            <a href="#">accessories</a>
           </div>
         </li>
-        <li class="nav-link"><a href="login.html">login/sign up</a></li>
+        <li class="nav-link"><a href="fakelogin.html">login/sign up</a></li>
         <label for="cart" id="items">0</label>
         <li class="nav-link" id="cart" ><i class="fa fa-shopping-cart" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></i></a></li>
         <!-- main Section -->
@@ -80,35 +72,64 @@
      <!-- main Section -->
     <header class="main">
         <h1>leigh.com</h1>
-        <button onclick="new.html">latest</button>
 
       </header>
       
 
 
       <!-- info cards -->
+      <div class="earth-header">
+    <h1 class="myfont">NEW RANGE</h1>
+    <h2 class="myfont">Earth Collection</h2>
+    <hr>
+  </div>
       <div class="bg-sec">
     <section class="about" id="about">
       
       <div>
-        <h2>lorem</h2>
+        <h1>WOMEN</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
           pariatur recusandae saepe placeat ipsam vitae. Suscipit, ducimus
           adipisci unde porro earum, repudiandae ipsa autem nobis laborum
           dolores non! Deleniti, quae!
         </p>
-        <button>shop now</button>
+        <button class=""><a href="woman.html">shop women</a></button>
       </div>
       <img src="./assets/img/banner7.jpg" alt="" />
       </section>
       </div>
+      <div class="bg-sec">
+        <section class="myabout" id="myabout">
+          <img src="./assets/img/menfeild.jpeg" alt="" class="imgstylemain"/>
+          <div>
+            <h1>MEN</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              pariatur recusandae saepe placeat ipsam vitae. Suscipit, ducimus
+              adipisci unde porro earum, repudiandae ipsa autem nobis laborum
+              dolores non! Deleniti, quae!
+            </p>
+            <button><a href="woman.html">shop men</a></button>
+          </div>
+         
+          </section>
+          </div>
+
+      <div class="faq-img">
+        <div class="header">
+          <h1 class="banner-font">RAINBOW COLLECTION DROPPING</h1>
+          <p class="banner-font">22.05.2021</p>
+        </div>
+      </div>
 
 
     <!-- about Section -->
+    
     <h1 class="myfont">COMING SOON</h1>
-    <h2 class="myfont">rainbow collection</h2>
+    <h2 class="myfont" >rainbow collection</h2>
     <hr>
+    
     <div class="row"> 
         <div class="column">
           <img src="./assets/img/pexels-marco-trinidad-2881785.jpg" style="width:100%">
@@ -133,6 +154,26 @@
         </div>
       </div>
 
+       <!--contact-->
+    
+    <a id="contact-link"></a>
+
+    <div class="contact">
+      <div class="contact-items">
+        <h1 class="myfont">CONTACT US</h1>
+        <form
+          action="mailto:robyn.jabari@gmail.com"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="text" placeholder="Name" />
+          <input type="text" placeholder="Email" />
+          <textarea cols="20" rows="10" placeholder="message us"> </textarea>
+        <button>Submit</button>
+        </form>
+      </div>
+    </div>
+
 
        <!--footer-->
     <div class="footer">
@@ -151,5 +192,6 @@
     <script src="./assets/scripts/nav.js"></script>
     <script src="./assets/scripts/add-cart.js"></script>
     <script src="./assets/scripts/modal.js"></script>
+    <script src="./assets/scripts/add-to-cart2.js>"></script>
   </body>
 </html>

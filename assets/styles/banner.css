@@ -1,0 +1,28 @@
+.cover-img {
+  background-image: url("../img/banner.jpeg");
+  background-position: center;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 8%;
+}
+
+.faq-img {
+  background-image: url("../img/smile.jpeg");
+  background-position: center;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 4%;
+  margin-bottom: 6%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-font {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 70px;
+}

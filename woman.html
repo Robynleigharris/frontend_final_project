@@ -20,33 +20,20 @@
       <img src="./assets/img/logo.png" alt="Logo" class="logo" />
       
       <ul class="nav-links" id="nav-links">
-        <div class="wrap">
-             <div class="search">
-              <input type="text" class="searchTerm" placeholder="What are you looking for?">
-              <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-             </button>
-            </div>
-            </div>
+       
         <li class="nav-link"><a href="index.html">HOME</a></li>
         <li class="nav-link dropdown">
           <a href="javascript:void(0)" class="dropbtn">WOMAN</a>
           <div class="dropdown-content">
             <a href="woman.html">All</a>
-            <a href="#">tops</a>
-            <a href="#">bottoms</a>
-            <a href="#">accessories</a>
         <li class="nav-link dropdown">
           <a href="javascript:void(0)" class="dropbtn">MEN</a>
           <div class="dropdown-content">
             <a href="men.html">All</a>
-            <a href="#">tops</a>
-            <a href="#">bottoms</a>
-            <a href="#">accessories</a>
             <button class="hamburger" onclick="toggleNav()">BURGERTHING</button>
           </div>
         </li>
-        <li class="nav-link"><a href="login.html">login/sign up</a></li>
+        <li class="nav-link"><a href="fakelogin.html">login/sign up</a></li>
         <label for="cart" id="items">0</label>
         <li class="nav-link" id="cart" ><i class="fa fa-shopping-cart" onclick="openCart()" style="width:auto;"></i></a></li>
 
@@ -58,12 +45,12 @@
     </div>
 
     <div id="container"></div>
+    <h3>TOTAL:</h3>
     <div class="cartTotal">
-      <h3>TOTAL:</h3>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="submit" style.display='none' class="cancelbtn">Purchase</button>
+      <button type="button" style.display='none' class="cancelbtn" onclick="purchase()">Purchase</button>
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
       
     </div>

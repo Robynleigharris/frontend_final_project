@@ -1,7 +1,7 @@
 .about {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10%;
+  margin-bottom: 4%;
   margin-top: 10%;
 }
 
@@ -23,6 +23,44 @@
 
 .about > img {
 }
+/* Media query to change display options of about section */
+@media screen and (max-width: 768px) {
+  .about {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .about > div,
+  .about > img {
+    width: 100%;
+  }
+}
+
+.myabout {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10%;
+}
+
+.myabout > div,
+.myabout > img {
+  width: 30%;
+}
+
+.myabout > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5%;
+  background-color: #c0a58e;
+  /* box-shadow: 7px 7px 14px #c3c1c1, -7px -7px 14px #ffffff;*/
+}
+
+.myabout > img {
+  margin-left: 20%;
+}
+
 /* Media query to change display options of about section */
 @media screen and (max-width: 768px) {
   .about {
