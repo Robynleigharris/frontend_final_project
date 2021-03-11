@@ -54,7 +54,7 @@ function showcart() {
 function renderCart() {
   let cart = JSON.parse(localStorage.getItem("cart"));
 
-  fetch("http://127.0.0.1:5000/show-records/")
+  fetch("https://evening-escarpment-06933.herokuapp.com/show-records/")
     .then((res) => res.json())
     .then((data) => {
       s;

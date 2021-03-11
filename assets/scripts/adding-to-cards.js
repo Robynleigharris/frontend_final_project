@@ -1,4 +1,4 @@
-fetch("http://127.0.0.1:5000/show-records/")
+fetch("https://evening-escarpment-06933.herokuapp.com/show-records/")
   .then((response) => response.json())
   .then((json) => {
     console.log(json);

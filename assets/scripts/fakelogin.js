@@ -5,7 +5,7 @@ function creatingAcc() {
   let form = document.getElementById("creatingaccount");
   const inputs = form.getElementsByTagName("input");
 
-  fetch("http://127.0.0.1:5000/creating-an-account/", {
+  fetch("https://evening-escarpment-06933.herokuapp.com/creating-an-account/", {
     method: "POST",
     body: JSON.stringify({
       username: inputs[0].value,
@@ -34,7 +34,7 @@ function loggingin() {
   let password = inputs[2].value;
 
   let users;
-  fetch("http://127.0.0.1:5000/show-user/")
+  fetch("https://evening-escarpment-06933.herokuapp.com/show-user/")
     .then((response) => response.json())
     .then((json) => {
       console.log(json);

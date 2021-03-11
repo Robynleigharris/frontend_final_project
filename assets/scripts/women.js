@@ -1,5 +1,5 @@
 let Items = [];
-fetch("http://127.0.0.1:5000/show-women/")
+fetch("https://evening-escarpment-06933.herokuapp.com/show-women/")
   .then((response) => response.json())
   .then((json) => {
     console.log(json);
